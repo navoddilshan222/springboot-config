@@ -2,9 +2,9 @@ server:
   port: 8080
 
 spring:
-  redis:
-    host: localhost
-    port: 6379
+#   redis:
+#     host: localhost
+#     port: 6379
   application:
     name: apigateway
   cloud:
@@ -18,10 +18,10 @@ spring:
           uri: http://localhost:8002/
           predicates:
             - Path=/api/v1/cart/**
-          filters:
-            - name: RequestRateLimiter
-              args:
-                redis-rate-limiter.replenishRate: 20
-                redis-rate-limiter.burstCapacity: 40
-                redis-rate-limiter.requestedTokens: 1
+#           filters:
+#             - name: RequestRateLimiter
+#               args:
+#                 redis-rate-limiter.replenishRate: 20
+#                 redis-rate-limiter.burstCapacity: 40
+#                 redis-rate-limiter.requestedTokens: 1
 
