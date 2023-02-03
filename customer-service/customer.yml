@@ -28,13 +28,13 @@ resilience4j:
         slidingWindowType: COUNT_BASED
   retry:
     instances:
-      serviceA:
+      CustomerService:
         registerHealthIndicator: true
         maxRetryAttempts: 5
         waitDuration: 10s
   ratelimiter:
     instances:
-      serviceA:
+      CustomerService:
         registerHealthIndicator: false
         limitForPeriod: 10
         limitRefreshPeriod: 10s
