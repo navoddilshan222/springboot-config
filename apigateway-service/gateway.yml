@@ -11,9 +11,9 @@ spring:
     gateway:
       routes:
         - id: route1
-          uri: http://localhost:8080/hello
+          uri: http://localhost:8001
           predicates:
-            - Path=/hello
+            - Path=/api/v1/customers/**
           filters:
             - name: RequestRateLimiter
               args:
