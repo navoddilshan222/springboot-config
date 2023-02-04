@@ -38,5 +38,5 @@ resilience4j:
         registerHealthIndicator: true
         limitForPeriod: 2
         limitRefreshPeriod: 4s
-        timeoutDuration: 0
+        timeoutDuration: 10s
         eventConsumerBufferSize: 100
